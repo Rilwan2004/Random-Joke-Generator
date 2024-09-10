@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p> <%= setup %></p>
+    </div>
+    <div>
+        <p> <%= delivery %> </p>
+    </div>
+    
+
+    <form id="joke-form"  method="post">  
+        <label for="category">Choose a category:</label>
+        <select id="category" name="category">  
+            <option value="Any">Any</option>
+            <option value="Dark">Dark</option>
+            <option value="Programming">Programming</option>
+            <option value="Misc">Miscellaneous</option>
+            <option value="Pun">Pun</option>
+            <option value="Spooky">Spooky</option>
+            <option value="Christmas">Christmas</option>
+        </select>
+        <label for="type">Select a type</label>
+        <select name="type" id="type">
+            <option value="single">Single</option>
+            <option value="twopart">Two-part</option>        
+        </select>
+
+        <h3>Filter jokes to be blacklisted </h3>
+        <div>
+        <input type="checkbox" id="nsfw" name="filter" value="nsfw">
+        <label for="nsfw">NSFW</label><br>
+
+        <input type="checkbox" id="religious" name="filter" value="religious">
+        <label for="religious">Religious</label><br>
+
+        <input type="checkbox" id="political" name="filter" value="political">
+        <label for="political">Political</label><br>
+
+        <input type="checkbox" id="racist" name="filter" value="racist">
+        <label for="racist">Racist</label><br>
+
+        <input type="checkbox" id="sexist" name="filter" value="sexist">
+        <label for="sexist">Sexist</label><br>
+        
+        <input type="checkbox" id="explicit" name="filter" value="explicit">
+        <label for="explicit">Explicit</label><br>
+    </div>
+        <br>
+        <input type="submit" formaction="/get-joke"></button>
+    </form>
+
+</body>
+</html>
